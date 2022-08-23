@@ -1,0 +1,11 @@
+.intro_text {
+    margin-top: 20px;
+    padding-top: 20px;
+}
+
+.picture {
+    background-image: url("static\logo2.png") !important;
+    min-width: 20vw !important; 
+    min-height: auto !important;
+
+}

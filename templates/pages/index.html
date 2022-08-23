@@ -1,0 +1,270 @@
+{% extends 'base.html' %}
+{% block content %}
+
+
+<br><br>
+<!---------------------------------- Top Section -------------------------------------->
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <h1>Professional Pet Services</h1>
+      <h3><i>Bringing love and care to pets in and around Transylvania County</i> </h3>
+    </div>
+    <div class="col">
+      <img src="../../static/logo.png" alt="Company Mascot" width="500" height="500">
+    </div>
+  </div>
+</div>
+<br><br><br><br>
+<!---------------------------------------------------------------------------------------->
+
+
+
+
+<!---------------------------------- Services Section ------------------------------------->
+
+<a id="services"></a>
+<div class="container">
+  <div class="card">
+    <h5 class="card-header">
+      <div class="container">
+        <div class="row">
+          <div class="col">
+            Select a service for more information
+          </div>
+          <div class="col">
+            <div class="d-md-flex justify-content-md-end">
+              <a href="{% url 'intake' %}"><button type="button" class="btn btn-success">Intake Form</button></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </h5>
+    <div class="card-body">
+      <div class="accordion accordion-flush" id="accordionFlushExample">
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="flush-headingOne">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+              data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+              In Home Dog Grooming / Bathing
+            </button>
+          </h2>
+          <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne"
+            data-bs-parent="#accordionFlushExample">
+            <div class="accordion-body">In fermentum posuere urna nec tincidunt praesent. At volutpat diam ut venenatis
+              tellus in metus. Nunc eget lorem dolor sed. Cras adipiscing enim eu turpis egestas. Habitasse platea
+              dictumst vestibulum rhoncus est pellentesque. Malesuada fames ac turpis egestas sed tempus urna et
+              pharetra.
+              Tellus rutrum tellus pellentesque eu tincidunt tortor aliquam. Nulla aliquet porttitor lacus luctus
+              accumsan
+              tortor. Mauris ultrices eros in cursus. Gravida arcu ac tortor dignissim convallis aenean et tortor at.
+              Lacus laoreet non curabitur gravida arcu ac tortor dignissim. Maecenas sed enim ut sem viverra aliquet
+              eget.
+              Bibendum at varius vel pharetra.</div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="flush-headingTwo">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+              data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+              Cat Nail Trim
+            </button>
+          </h2>
+          <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo"
+            data-bs-parent="#accordionFlushExample">
+            <div class="accordion-body">Quam viverra orci sagittis eu volutpat odio facilisis mauris. Cursus sit amet
+              dictum sit amet justo donec enim diam. Amet cursus sit amet dictum sit. Integer vitae justo eget magna
+              fermentum iaculis eu. Enim eu turpis egestas pretium aenean pharetra magna. Vitae justo eget magna
+              fermentum
+              iaculis eu. Diam volutpat commodo sed egestas. Nec tincidunt praesent semper feugiat nibh sed. Morbi
+              tristique senectus et netus et malesuada fames. Odio eu feugiat pretium nibh ipsum. Viverra mauris in
+              aliquam sem fringilla ut morbi tincidunt augue. Eu augue ut lectus arcu bibendum at.</div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="flush-headingThree">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+              data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+              Dog Walking
+            </button>
+          </h2>
+          <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree"
+            data-bs-parent="#accordionFlushExample">
+            <div class="accordion-body">Mi quis hendrerit dolor magna eget est. Lobortis scelerisque fermentum dui
+              faucibus in ornare quam viverra. Augue neque gravida in fermentum et. Enim lobortis scelerisque fermentum
+              dui. Volutpat odio facilisis mauris sit amet. Interdum posuere lorem ipsum dolor sit. Tellus in hac
+              habitasse platea dictumst vestibulum rhoncus. Facilisis volutpat est velit egestas dui id ornare. Dolor
+              sit
+              amet consectetur adipiscing elit pellentesque habitant morbi tristique. Nulla facilisi nullam vehicula
+              ipsum
+              a. Id interdum velit laoreet id. Nibh praesent tristique magna sit amet purus gravida quis blandit.</div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="flush-headingFour">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+              data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour">
+              Drop in Visits
+            </button>
+          </h2>
+          <div id="flush-collapseFour" class="accordion-collapse collapse" aria-labelledby="flush-headingFour"
+            data-bs-parent="#accordionFlushExample">
+            <div class="accordion-body">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+              incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+              laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit
+              esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa
+              qui officia deserunt mollit anim id est laborum.</div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="flush-headingFive">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+              data-bs-target="#flush-collapseFive" aria-expanded="false" aria-controls="flush-collapseFive">
+              Pet Sitting / Overnight Stays
+            </button>
+          </h2>
+          <div id="flush-collapseFive" class="accordion-collapse collapse" aria-labelledby="flush-headingFive"
+            data-bs-parent="#accordionFlushExample">
+            <div class="accordion-body">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+              incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+              laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit
+              esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa
+              qui officia deserunt mollit anim id est laborum.</div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="flush-headingSix">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+              data-bs-target="#flush-collapseSix" aria-expanded="false" aria-controls="flush-collapseFive">
+              Personalized Remembrance Jewelry
+            </button>
+          </h2>
+          <div id="flush-collapseSix" class="accordion-collapse collapse" aria-labelledby="flush-headingSix"
+            data-bs-parent="#accordionFlushExample">
+            <div class="accordion-body">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+              incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+              laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit
+              esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa
+              qui officia deserunt mollit anim id est laborum.</div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="flush-headingSeven">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+              data-bs-target="#flush-collapseSeven" aria-expanded="false" aria-controls="flush-collapseSeven">
+              House Cleaning
+            </button>
+          </h2>
+          <div id="flush-collapseSeven" class="accordion-collapse collapse" aria-labelledby="flush-headingSeven"
+            data-bs-parent="#accordionFlushExample">
+            <div class="accordion-body">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+              incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+              laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit
+              esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa
+              qui officia deserunt mollit anim id est laborum.</div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="flush-headingEight">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+              data-bs-target="#flush-collapseEight" aria-expanded="false" aria-controls="flush-collapseEight">
+              Yard Cleaning
+            </button>
+          </h2>
+          <div id="flush-collapseEight" class="accordion-collapse collapse" aria-labelledby="flush-headingEight"
+            data-bs-parent="#accordionFlushExample">
+            <div class="accordion-body">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+              incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+              laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit
+              esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa
+              qui officia deserunt mollit anim id est laborum.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<br><br>
+<!-- -------------------------------------------------------------------------------- -->
+
+
+
+<!---------------------------------- About Me Section ------------------------------------->
+
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <img src="../../static/banner3.png" alt="Company Mascot" width="500" height="500">
+    </div>
+    <div class="col">
+      <h1>More about me</h1>
+      <h5> I started this business in 2019 after working in the grooming environment for over 4 years. Although grooming
+        is still a passion of mine, I found the fast paced style was detached and made it harder to form a close bond
+        with the dogs. Because of that I have branched out to other services that go hand in hand with at home grooming.
+        Not only do I groom your dog in your home where they are most comfortable, I also provide pet sitting, dog
+        walking and house cleaning. I wanted to provide a more personal experience for both the pet and the parent. The
+        services I provide go above and beyond what you normally get when going to the groomer.
+        <br><br>
+        Follow me on instagram
+        https://www.instagram.com/breedloves_pet_porfolio/
+      </h5>
+    </div>
+  </div>
+</div>
+<br><br>
+
+
+<!-- -------------------------------------------------------------------------------- -->
+
+
+
+
+<!---------------------------------- Gallery ------------------------------------->
+
+<div class="container">
+  <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="false">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+        aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+        aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+        aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="../../static/banner.png" class="d-block w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>First slide label</h5>
+          <p>Some representative placeholder content for the first slide.</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="../../static/harryboy.png" class="d-block w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>Second slide label</h5>
+          <p>Some representative placeholder content for the second slide.</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="../../static/banner3.png" class="d-block w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>Third slide label</h5>
+          <p>Some representative placeholder content for the third slide.</p>
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+</div>
+<!-- -------------------------------------------------------------------------------- -->
+
+{% endblock %}

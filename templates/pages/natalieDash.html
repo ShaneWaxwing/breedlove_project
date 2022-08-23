@@ -1,0 +1,84 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Breedlove Pet Services</title>
+  <link rel="stylesheet" href="{%static 'styles.css'%}">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+</head>
+
+<body>
+
+
+  <ul class="nav nav-tabs">
+    <li class="nav-item">
+      <a class="nav-link active" aria-current="page" href="{% url 'natadash' %}"><b>Intake Forms</b></a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="{% url 'clients' %}">Current Jobs</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#">Schedule</a>
+    </li>
+  </ul>
+
+
+
+
+
+  <table class="table table-striped table-hover">
+    <tr>
+      <th>Job</th>
+      <th>Address</th>
+      <th>Dog Breed</th>
+      <th>Phone Number</th>
+      <th>Refuse</th>
+      <th>Accept</th>
+    </tr>
+    {% for item in Items %}
+    {% if not item.accepted %}
+    <tr>
+      <th>{% if item.groom %} Grooming / Bathing <br>{% endif %}
+        {% if item.cat %} Cat Nail Trim <br>{% endif %}
+        {% if item.walk %} Dog Walking <br>{% endif %}
+        {% if item.overnight %} Pet Sitting / Overnight <br> {% endif %}
+        {% if item.visit %} Drop-in Visit <br> {% endif %}
+        {% if item.jewelry %} Personalized Remembrance Jewelry<br> {% endif %}
+        {% if item.yard_cleaning %} Yard Cleaning <br>{% endif %}
+        {% if item.house_cleaning %} House Cleaning {% endif %}
+      </th>
+      <th>{{item.address}}</th>
+      <th>{{item.breed}}</th>
+      <th>{{item.phone_number}}</th>
+      <th>
+
+
+        <form action="{% url 'delete' %}" method="POST">
+          {% csrf_token %}
+          <input type="hidden" name="id" value="{{item.id}}">
+          <button type="submit" class="btn btn-outline-danger">Delete</button>
+        </form>
+        </th><th>
+        <form action="{% url 'accept' %}" method="POST">
+          {% csrf_token %}
+          <input type="hidden" name="id" value="{{item.id}}">
+          <button type="submit" class="btn btn-outline-success">Accept</button>
+        </form>
+      </th>
+    </tr>
+ {% endif %}
+    {% endfor %}
+  </table>
+
+  <script src="{%static 'app.js'%}"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>

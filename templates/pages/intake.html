@@ -1,0 +1,151 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="container mt-10 border border-primary">
+  <div class="row justify-content-center align-items-center">
+    <div class="col">
+
+
+      <form class="row" action="{% url 'intake' %}" method="POST" id="formBox">
+        {% csrf_token %}
+
+
+        <div class="container text-center">
+          <div class="row">
+            <div class="col">
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="True" id="flexCheckChecked" checked name="groom">
+                <label class="form-check-label" for="flexCheckChecked">
+                  In Home Dog Grooming / Bathing
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="True" id="flexCheckDefault" name="cat">
+                <label class="form-check-label" for="flexCheckDefault">
+                  Cat Nail Trim
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="True" id="flexCheckDefault" name="walk">
+                <label class="form-check-label" for="flexCheckDefault">
+                  Dog Walking
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="True" id="flexCheckDefault" name="visit">
+                <label class="form-check-label" for="flexCheckDefault">
+                  Drop in Visits
+                </label>
+              </div>
+            </div>
+            <div class="col">
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="True" id="flexCheckDefault" name="overnight">
+                <label class="form-check-label" for="flexCheckDefault">
+                  Pet Sitter / Overnight Stays
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="True" id="flexCheckDefault" name="jewelry">
+                <label class="form-check-label" for="flexCheckDefault">
+                  Personalized Remembrance Jewelry
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="True" id="flexCheckDefault" name="yard_cleaning">
+                <label class="form-check-label" for="flexCheckDefault">
+                  Yard Cleaning
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="True" id="flexCheckDefault"
+                  name="house_cleaning">
+                <label class="form-check-label" for="flexCheckDefault">
+                  House Cleaning
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <br><br>
+
+
+        <div class="container-fluid mt-10 border border-primary">
+          <div class="row">
+            <div class="col-md-6">
+              <label for="pet_type" class="form-label">First Name</label>
+              <input type="text" class="form-control" id="fname" name="fname">
+            </div>
+
+
+
+
+            <div class="col-md-6">
+              <label for="lname" class="form-label">Last Name</label>
+              <input type="text" class="form-control" id="lname" name="lname">
+            </div>
+
+            <div class="col-md-6">
+              <label for="inputEmail4" class="form-label">Email</label>
+              <input type="email" class="form-control" id="inputEmail4" name="email">
+            </div>
+
+            <div class="col-md-6">
+              <label for="pnumber" class="form-label">Phone Number</label>
+              <input type="tel" class="form-control" id="pnumber" name="pnumber">
+            </div>
+
+            <div class="col-md-6">
+              <label for="inputAddress" class="form-label">Address</label>
+              <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St, City, NC, 12345"
+                name="address">
+            </div>
+
+
+
+          </div>
+
+          <br>
+          <div class="container-fluid mt-10 border border-primary">
+
+
+
+
+
+            <div class="mb-3">
+              <label for="formGroupExampleInput" class="form-label">Pet Name</label>
+              <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Spot" name="pet_name">
+            </div>
+
+
+            <label for="" class="form-label">Pet Type</label>
+            <select class="col form-select" aria-label="Default select example" name="pet_type">
+              <option selected value="Dog">Dog</option>
+              <option value="Cat">Cat</option>
+              <option value="Other">Other (Sitting Only)</option>
+            </select>
+            <br>
+
+
+
+
+
+            <div class="mb-3">
+              <label for="formGroupExampleInput2" class="form-label">Breed (Dog Only)</label>
+              <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Husky" name="breed">
+            </div>
+
+            <div class="mb-3">
+              <label for="formGroupExampleInput2" class="form-label">Vet Name</label>
+              <input type="text" class="form-control" id="formGroupExampleInput2"
+                placeholder="Pisgah Pet Care Animal Hospital" name="vet_name">
+            </div>
+          </div>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+    </div>
+  </div>
+</div>
+{% endblock %}
